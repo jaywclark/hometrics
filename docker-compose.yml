@@ -1,0 +1,7 @@
+version: '3'
+services:
+  meter:
+    image: sharkworks:latest
+    build: .
+    privileged: true
+
