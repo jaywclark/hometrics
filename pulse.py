@@ -7,7 +7,6 @@ from config import conf
 
 def record_count(btn):
     sendmetric('pulse', 1, {'id':conf['pulse'][str(btn.pin)]['pin'], 'metername': conf['pulse'][str(btn.pin)]['metername'], 'utility': conf['pulse'][str(btn.pin)]['utility']})
-    print(btn.pin, 'active',flush=True)
     blink()
 
 

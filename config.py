@@ -34,5 +34,3 @@ def parse_config(path=None, data=None, tag='!ENV'):
         raise ValueError('Either a path or data should be defined as input')
 
 conf = parse_config(path='config.yaml')
-for pulser in conf['pulse']:
-    print(pulser)
