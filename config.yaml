@@ -1,0 +1,16 @@
+telegraf:
+    host: 10.10.10.42
+    port: 8092
+
+pi:
+    host: 10.10.10.196
+
+pulse:
+    GPIO2: 
+        pin: 'GPIO2'
+        utility: 'water'
+        metername: 'outside'
+    GPIO3:
+        pin: 'GPIO3'
+        utility: 'water'
+        metername: 'inside'
