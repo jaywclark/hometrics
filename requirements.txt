@@ -1,3 +1,4 @@
 gpiozero
 pytelegraf
 pyyaml
+RPi.GPIO
