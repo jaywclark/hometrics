@@ -11,6 +11,7 @@ class main(object):
         thread = threading.Thread(target=self.run, args=())
         thread.daemon = True
         thread.start()
+        pulse()
 
     def run(self):
         while True:
@@ -33,5 +34,4 @@ class pulse(object):
 print('starting hometrics',flush=True)
 
 main()
-pulse()
 
