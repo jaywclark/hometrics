@@ -5,3 +5,7 @@ services:
     build: .
     privileged: true
     restart: always
+    env_file: 
+      - .env
+
+

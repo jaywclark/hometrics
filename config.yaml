@@ -1,9 +1,13 @@
+#host env vars work here too i.e. !ENV ${Hostname}
+
 telegraf:
     host: 10.10.10.42
     port: 8092
 
 pi:
     host: 10.10.10.196
+    piname: 'pizero'
+
 
 pulse:
     GPIO2: 

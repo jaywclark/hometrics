@@ -2,7 +2,7 @@ FROM arm32v6/python:alpine
 
 WORKDIR /usr/src/app
 
-RUN apk update && apk add gcc && apk add libc-dev && rm -rf /var/cache/apk/*
+RUN apk update && apk add gcc && apk add libc-dev && apk add linux-headers && rm -rf /var/cache/apk/*
 
 COPY requirements.txt ./
 

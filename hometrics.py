@@ -2,10 +2,11 @@ from signal import pause
 from pulse import pulse_count
 import threading
 import time
+from hostmetrics import load
 
 
 class main(object):
-    def __init__(self, interval=1):
+    def __init__(self, interval=10):
 
         self.interval = interval
         thread = threading.Thread(target=self.run, args=())
@@ -15,16 +16,13 @@ class main(object):
 
     def run(self):
         while True:
-            # Do something
-            print('Do something here later',flush=True)
-
+            load()            
             time.sleep(self.interval)
 
 class pulse(object):
     def __init__(self):
         thread = threading.Thread(target=self.run, args=())
         thread.daemon = False
-        time.sleep(5)
         thread.start()
 
     def run(self):
