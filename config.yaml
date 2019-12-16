@@ -6,15 +6,17 @@ telegraf:
 
 pi:
     host: 10.10.10.196
-    piname: 'pizero'
+    piname: !ENV ${piname}
 
 
 pulse:
     GPIO2: 
-        pin: 'GPIO2'
-        utility: 'water'
-        metername: 'outside'
+        pin: !ENV ${pulse_GPIO2_pin}
+        utility: !ENV ${pulse_GPIO2_utility}
+        metername: !ENV ${pulse_GPIO2_metername}
+        unit: !ENV ${pulse_GPIO2_unit}
     GPIO3:
-        pin: 'GPIO3'
-        utility: 'water'
-        metername: 'inside'
+        pin: !ENV ${pulse_GPIO3_pin}
+        utility: !ENV ${pulse_GPIO3_utility}
+        metername: !ENV ${pulse_GPIO3_metername}
+        unit: !ENV ${pulse_GPIO3_unit}

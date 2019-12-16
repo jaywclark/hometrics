@@ -6,7 +6,7 @@ from config import conf
 
 
 def record_count(btn,indicatorled = gpiozero.LED(17)):
-    sendmetric('pulse', 1, {'piname': conf['pi']['piname'],'id':conf['pulse'][str(btn.pin)]['pin'], 'metername': conf['pulse'][str(btn.pin)]['metername'], 'utility': conf['pulse'][str(btn.pin)]['utility']})
+    sendmetric(conf['pulse'][str(btn.pin)]['unit'], 1, {'piname': conf['pi']['piname'],'id':conf['pulse'][str(btn.pin)]['pin'], 'metername': conf['pulse'][str(btn.pin)]['metername']})
     blink(indicatorled)
 
 
